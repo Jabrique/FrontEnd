@@ -4,10 +4,29 @@
     box-sizing: border-box;
 }
 
+.topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background-color: black;
+    z-index: 999;
+}
+
 .container {
     width: 960px;
-    margin: auto;
+    margin: 80px auto;
     background-color: #eaeaea;
+    position: relative;
+}
+
+.twitter img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -23px;
+    right: -28px;
 }
 
 .header {
