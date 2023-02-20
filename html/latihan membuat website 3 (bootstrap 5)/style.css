@@ -38,18 +38,55 @@ body {
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
 }
 
-
-
 .col-extra-wide {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
 }
 
-#members .container {
+#members .container{
+    max-width: 100vw;
+    position: relative;
     overflow: hidden;
 }
 
-.kolom1 {
-    width: 320vh
+#members .cards {
+    width: 300%;
+    display: flex;
+}
+
+
+#members .cards .row {
+    width: calc(100% / 3 - 12rem);
+    display: flex;
+    margin: 0 100px;
+}
+
+.carousel-control-prev,
+.carousel-control-prev-icon {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 35%;
+    left: 10px;
+}
+
+.carousel-control-next,
+.carousel-control-next-icon {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 35%;
+    right: 10px;
+}
+
+#members .carousel-item .kolom1buah {
+    width: calc(100% / 3 - 12rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.kolom1buah .col-md-4 {
+    display: flex;
+    width: 100%;
 }
