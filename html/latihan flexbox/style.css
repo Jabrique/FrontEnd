@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 1000vh;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul a:after { 
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: red;
+    transition: 0.2s;
+}
+
+nav ul a:hover:after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+    background: red;
+    z-index: 2;
+    margin-top: 8px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content:"";
+    position: absolute;
+    height: 3px;
+    right: 0;
+    border-radius: 3px;
+    background-color: red;
+    transition: .2s;
+}
+
+.hamburger::before{
+    top: -7.5px;
+    width: 20px;
+}
+
+.hamburger::after {
+    top: 7.5px;
+    width: 15px;
+}
+
+.toggle-menu {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    right: 32px;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+.toggle-menu:checked ~ .hamburger {
+    background-color: transparent;
+}
+
+.toggle-menu:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+    width: 25px;
+}
+
+.toggle-menu:checked ~ .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 25px;
+}
+
+@media screen and (max-width:576px) {
+    .hamburger,
+    .toggle-menu {
+        display: flex;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background-color: black;
+        height: 100vh;
+        justify-content: space-evenly;
+        text-align: center;
+        z-index: -1;
+        padding-top: 65px;
+        transition: .5s;
+    }
+
+    nav input:checked ~ .menu {
+        right: 0;
+        opacity: 1;
+    }
+}
