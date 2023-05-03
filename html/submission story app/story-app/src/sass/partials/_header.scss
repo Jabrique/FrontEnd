@@ -1,0 +1,15 @@
+nav.navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding-block: 20px;
+    &.scrolled { 
+        box-shadow: 0 2px 8px 4px #00000055;
+    }
+    .container-fluid{
+        padding-inline: 24px;
+        transition: box-shadow 0.2s ease-in-out;
+        z-index: 999;
+    }
+}
