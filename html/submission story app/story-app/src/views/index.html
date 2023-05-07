@@ -6,29 +6,49 @@
     <title><%= htmlWebpackPlugin.options.title %> | Money Tracker App</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Story App</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav me-lg-6 mb-2 mb-lg-0 gap-lg-6">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
-            <form class="d-flex me-lg-5" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <header class="mb-7">
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+
+          <!-- card -->
+          <div class="row mb-5 g-3 justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-4 justify-content-center d-flex">
+              <div class="card" style="width: 23rem;">
+                <img src="https://source.unsplash.com/1200x700/?programming" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 justify-content-center d-flex">
+              <div class="card" style="width: 23rem;">
+                <img src="https://source.unsplash.com/1200x700/?programming" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 justify-content-center d-flex">
+              <div class="card" style="width: 23rem;">
+                <img src="https://source.unsplash.com/1200x700/?programming" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </main>
   </body>
 </html>

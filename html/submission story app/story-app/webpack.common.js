@@ -11,8 +11,6 @@ const htmlWebpackPluginConfig = {
   },
   templateParameters: {
     brandName: 'Story App',
-    navLinks: 'test',
-    footerContent: 'test2'
   },
 };
 
