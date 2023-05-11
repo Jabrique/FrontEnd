@@ -27,7 +27,13 @@ class SearchBar extends LitWithoutShadowDom {
         const responseBooks = await fetchBooks.json()
         const userBooks = responseBooks.listStory
         const filteredBooks = userBooks.filter(item=> item.name.toUpperCase().includes(searchInput.value.toUpperCase()))
-        console.log(filteredBooks)
+
+        const spinner = document.querySelector('.spinner-wrapper')
+        spinner.style.display = 'flex'
+        setTimeout(()=>{
+          spinner.style.display = 'none'
+        }, 500)
+
         document.querySelector('card-list').setAttribute('cardArray', JSON.stringify(filteredBooks))
       })
   }
