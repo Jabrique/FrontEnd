@@ -5,6 +5,8 @@ import '../sass/main.scss';
 import './components/index'
 
 // Import javascript file as needed
+import Dashboard from './pages/dashboard';
+import Add from './pages/add'
 import * as bootstrap from 'bootstrap';
 
 document.addEventListener('scroll', (event) => {
@@ -16,13 +18,21 @@ document.addEventListener('scroll', (event) => {
 });
 
 const routes = {
-  '/': Dasboard,
+  '/': Dashboard,
   '/books/add.html': Add,
 }
 
-const detectRoute = () => route[window.location.pathname]
+const detectRoute = () => routes[window.location.pathname]
 
 window.addEventListener('DOMContentLoaded', async()=>{
   const route = detectRoute()
   route.init()
 })
+
+window.addEventListener('load', ()=>{
+  const spinner = document.querySelector('.spinner-wrapper')
+  setTimeout(()=>{
+    spinner.style.display='none';
+  }, 1000)
+})
+

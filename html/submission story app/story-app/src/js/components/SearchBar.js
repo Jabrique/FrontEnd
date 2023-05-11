@@ -17,11 +17,26 @@ class SearchBar extends LitWithoutShadowDom {
     }
   }
 
+  firstUpdated(){
+    const searchInput = document.querySelector('#searchInput')
+      console.log(document.getElementById('searchForm'))
+      
+      document.getElementById('searchForm').addEventListener('submit', async(event)=>{
+        event.preventDefault()
+        const fetchBooks = await fetch('/data/DATA.json')
+        const responseBooks = await fetchBooks.json()
+        const userBooks = responseBooks.listStory
+        const filteredBooks = userBooks.filter(item=> item.name.toUpperCase().includes(searchInput.value.toUpperCase()))
+        console.log(filteredBooks)
+        document.querySelector('card-list').setAttribute('cardArray', JSON.stringify(filteredBooks))
+      })
+  }
+
   render() {
     return html`
-      <form class="d-flex me-lg-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success" type="submit">${this.content}</button>
+      <form class="d-flex me-lg-5" id="searchForm" role="search">
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success" id="searchButton" type="submit">${this.content}</button>
       </form>
     `;
   }

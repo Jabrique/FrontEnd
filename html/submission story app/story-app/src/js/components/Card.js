@@ -1,7 +1,7 @@
 import { html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 
-class Card extends LitWithoutShadowDom {
+class CardBook extends LitWithoutShadowDom {
   static properties = {
     source: { type: String, reflect: true },
     alt: { type: String, reflect: true },
@@ -9,9 +9,9 @@ class Card extends LitWithoutShadowDom {
     cardContent: { type: String, reflect: true },
     buttonContent: { type: String, reflect: true },
   };
+
   render() {
     return html`
-      <div class="col-12 col-sm-6 col-lg-4 justify-content-center d-flex">
         <div class="card" style="width: 23rem;">
           <img src="${this.source}" class="card-img-top" alt="${this.alt}" />
           <div class="card-body">
@@ -20,9 +20,8 @@ class Card extends LitWithoutShadowDom {
             <a href="#" class="btn btn-primary">${this.buttonContent}</a>
           </div>
         </div>
-      </div>
     `;
   }
 }
 
-customElements.define("card", Card);
+customElements.define("card-book", CardBook);

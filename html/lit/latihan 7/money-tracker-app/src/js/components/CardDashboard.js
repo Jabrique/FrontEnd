@@ -27,6 +27,8 @@ class CardDashboard extends LitWithoutShadowDom {
           <p class="card-text"></p>
         </div>
       </div>
+
+      
     `;
   }
 }

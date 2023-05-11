@@ -4,7 +4,7 @@ const Dashboard = {
     },
 
     async _initialData(){
-        const fetchBooks = await fetch('/data/Data.json')
+        const fetchBooks = await fetch('/data/DATA.json')
         const responseBooks = await fetchBooks.json()
         this._userBooks = responseBooks.listStory
         this._populateBooksDataToCard(this._userBooks)
@@ -18,8 +18,8 @@ const Dashboard = {
         if(!Array.isArray(booksData)){
             throw new Error(`Parameter booksData should be an array. The value is ${booksData}`)
         }
-
-        document.querySelector('card-list').setAttribute('cardArray', booksData)
+        console.log(booksData)
+        document.querySelector('card-list').setAttribute('cardArray', JSON.stringify(booksData))
     }
 }
 
