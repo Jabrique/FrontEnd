@@ -55,6 +55,12 @@ module.exports = {
       template: path.resolve(__dirname, 'src/views/index.html'),
       ...htmlWebpackPluginConfig
     }),
+
+    new HtmlWebpackPlugin({
+      filename: 'book/add.html',
+      template: path.resolve(__dirname, 'src/views/book/add.html'),
+      ...htmlWebpackPluginConfig
+    }),
     
     new CopyWebpackPlugin({
       patterns: [
