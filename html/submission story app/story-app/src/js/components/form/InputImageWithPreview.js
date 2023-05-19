@@ -38,12 +38,12 @@ class InputImageWithPreview extends LitWithoutShadowDom{
     }
 
     _updatePhotoPreview(){
-        const evidenceImgChange = document.querySelector('#validationCustomEvidenceImgChange')
-        const evidenceImgInput = document.querySelector('#validationCustomEvidence')
+        const evidenceImgChange = document.querySelector('#validationCustomImageChange')
+        const evidenceImgInput = document.querySelector('#validationCustomImage')
 
         let evidenceBookImg = null
         if(this.defaultImage){
-            evidenceBookImg = document.querySelector('#validationCustomEvidenceImg')
+            evidenceBookImg = document.querySelector('#validationCustomImage')
         }
 
         const photo = evidenceImgInput.files[0]
@@ -69,7 +69,7 @@ class InputImageWithPreview extends LitWithoutShadowDom{
             background-position: center;
             background-size: contain;
           "
-          id="${this.inputId || nothing}ImgChange"
+          id="${this.inputId || nothing}Change"
         ></div>
       `;
       if(this.defaultImage){
@@ -78,7 +78,7 @@ class InputImageWithPreview extends LitWithoutShadowDom{
           class="img-fluid h-100"
           src="${this.defaultImage}"
           alt="${this.defaultImageAlt}"
-          id="${this.inputId || nothing}Img"
+          id="${this.inputId || nothing}"
         />
         ${imgChangeTemplate}
       `;

@@ -11,11 +11,11 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <header class="mb-7">
+    <header>
       <nav-app brandName="<%= brandName %>"></nav-app>
     </header>
 
-    <main>
+    <main class="pt-7" id="home">
       <div class="main-content">
         <div class="container py-5">
 
@@ -24,5 +24,18 @@
         </div>
       </div>
     </main>
+
+    <footer>
+      <div class="main-footer bg-dark">
+        <div class="container px-3 py-4">
+          <footer-app></footer-app>
+        </div>
+      </div>
+    </footer>
+
+    <to-top-button></to-top-button>
+
+    <modal-card id="bookDetailModal" class="modal fade" tabindex="-1" data-bs-backdrop="static"
+    data-bs-keyboard="false" title="Detail Book"></modal-card>
   </body>
 </html>

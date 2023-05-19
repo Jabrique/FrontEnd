@@ -57,8 +57,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'book/add.html',
-      template: path.resolve(__dirname, 'src/views/book/add.html'),
+      filename: 'books/add.html',
+      template: path.resolve(__dirname, 'src/views/books/add.html'),
       ...htmlWebpackPluginConfig
     }),
     

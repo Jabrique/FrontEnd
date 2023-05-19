@@ -42,7 +42,7 @@ class InputGroupWithValidation extends LitWithoutShadowDom{
     render(){
         return html`
             <div class="input-group has-validation">
-                <span class="input-group-text d-flex gap-2">${inputGroupTextTemplate()}</span>
+                <span class="input-group-text d-flex gap-2">${this.inputGroupTextTemplate()}</span>
                 <input 
                 type="text" 
                 class="form-control" 
