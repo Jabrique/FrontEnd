@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import {msg, updateWhenLocaleChanges} from '@lit/localize'
 
 class FooterApp extends LitElement{
     static styles=css`
@@ -7,9 +8,14 @@ class FooterApp extends LitElement{
         text-align: center;
     }
     `
+
+    constructor(){
+        super()
+        updateWhenLocaleChanges()
+    }
     render(){
         return html`
-        <p>Dibuat oleh seseorang</p>
+        <p>${msg(`Dibuat oleh seseorang`)}</p>
         `
     }
 }

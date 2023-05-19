@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="id" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s6abb1cd87fe0114e">
+  <source>Home</source>
+  <target>Halaman utama</target>
+</trans-unit>
+<trans-unit id="s21413ce668a25466">
+  <source>Add Books</source>
+  <target>Tambah Buku</target>
+</trans-unit>
+<trans-unit id="s5d929ff1619ac0c9">
+  <source>Search</source>
+  <target>Pencarian</target>
+</trans-unit>
+<trans-unit id="s122b09fe072cff3f">
+  <source>Dibuat oleh seseorang</source>
+  <target>Made by someone</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
