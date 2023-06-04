@@ -5,7 +5,7 @@ import {msg, updateWhenLocaleChanges} from '@lit/localize'
 class NavLinks extends LitWithoutShadowDom {
   constructor(){
     super()
-    updateWhenLocaleChanges()
+    updateWhenLocaleChanges(this)
   }
   render() {
     return html`

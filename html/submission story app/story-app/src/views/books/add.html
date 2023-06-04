@@ -18,46 +18,7 @@
     <main>
         <div class="main-content">
           <div class="container py-5">
-            <h1 class="mb-3">Add Book</h1>
-
-            <form class="row g-3" id="addBookForm" novalidate>
-              <div class="col-12 col-md-6">
-                <label for="validationCustomBookName" class="form-label">Nama</label>
-                <input-with-validation 
-                type="text"
-                InputId="validationCustomBookName"
-                invalidFeedbackMessage="Wajib diisi"
-                required></input-with-validation>
-              </div>
-              <div class="col-12 col-md-6">
-                <label for="validationCustomDate" class="form-label">Date</label>
-                <input-group-with-validation
-                type="datetime-local"
-                InputId="validationCustomDate"
-                inputGroupIcon="bi-calendar-event"
-                invalidFeedbackMessage="Wajib diisi"
-                validation
-                required></input-group-with-validation>
-              </div>
-              <div class="col-12">
-                <label for="validationCustomDescription" class="form-label">Description</label>
-                <textarea-with-validation
-                InputId="validationCustomDescription"
-                invalidFeedbackMessage="Wajib diisi"
-                required></textarea-with-validation>
-              </div>
-              <div class="col-12 col-md-6">
-                <label for="validationCustomImage" class="form-label">Image</label>
-                <input-image-with-preview
-                InputId="validationCustomImage"
-                invalidFeedbackMessage="Wajib diisi"
-                required></input-image-with-preview>
-              </div>
-
-              <div class="col-12 text-end mt-4">
-                <button class="btn btn-primary" type="submit">Submit</button>
-              </div>
-            </form>
+            <add-book-form></add-book-form>
           </div>
         </div>
     </main>

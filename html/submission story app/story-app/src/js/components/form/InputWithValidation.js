@@ -15,17 +15,11 @@ class InputWithValidation extends LitWithoutShadowDom{
 
     constructor(){
         super()
-        this._checkAvailAbilityProperty()
 
         this.type = 'text'
         this.required = false
     }
 
-    _checkAvailAbilityProperty(){
-        if(!this.hasAttribute('invalidFeedbackMessage')){
-            throw new Error(`Atribut "invalidFeedbackMessage" harus diterapkan pada elemen ${this.localName}`)
-        }
-    }
 
     render(){
         return html`

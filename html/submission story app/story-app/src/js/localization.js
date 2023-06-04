@@ -5,7 +5,7 @@ export const {getLocale, setLocale} = configureLocalization({
     sourceLocale,
     targetLocales,
     async loadLocale(locale){
-        return import('../generated/locales/${locale}.js')
+        return import(`../generated/locales/${locale}.js`)
     }
 })
 

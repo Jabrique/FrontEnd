@@ -32,11 +32,6 @@ class InputGroupWithValidation extends LitWithoutShadowDom{
             );
         }
 
-        if (!this.hasAttribute('invalidFeedbackMessage')) {
-            throw new Error(
-              `Atribut "invalidFeedbackMessage" harus diterapkan pada elemen ${this.localName}`,
-            );
-          }
     }
 
     render(){

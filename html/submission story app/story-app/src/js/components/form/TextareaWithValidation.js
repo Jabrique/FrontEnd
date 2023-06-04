@@ -15,18 +15,9 @@ class TextareaWithValidation extends LitWithoutShadowDom{
 
     constructor(){
         super()
-        this._checkAvailabilityProperty()
 
         this.rows = 3
         this.required = false
-    }
-
-    _checkAvailabilityProperty(){
-        if (!this.hasAttribute('invalidFeedbackMessage')) {
-            throw new Error(
-              `Atribut "invalidFeedbackMessage" harus diterapkan pada elemen ${this.localName}`,
-            );
-          }
     }
 
     render(){

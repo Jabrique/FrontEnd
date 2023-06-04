@@ -15,10 +15,10 @@ class CardBook extends LitWithoutShadowDom {
     return html`
       <div class="card" style="width: 23rem;">
         <img src="${this.source}" class="card-img-top" alt="${this.alt}" />
-        <div class="card-body">
+        <div class="card-body d-grid">
           <h5 class="card-title">${this.title}</h5>
           <p class="card-text">${this.cardContent}</p>
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDetailModal"
+          <a href="#" class="btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#bookDetailModal"
             data-record-id="${this.dataId}">${this.buttonContent}</a>
         </div>
       </div>

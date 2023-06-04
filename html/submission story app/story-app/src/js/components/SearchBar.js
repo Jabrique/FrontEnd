@@ -1,20 +1,15 @@
 import { html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
+import {msg, updateWhenLocaleChanges} from '@lit/localize'
 
 class SearchBar extends LitWithoutShadowDom {
   static properties = {
     content: { type: String, reflect: true },
   };
 
-  constructor() {
-    super();
-    this._checkAvailability();
-  }
-
-  _checkAvailability() {
-    if (!this.hasAttribute("content")) {
-      throw new Error(`Attribute "content" harus diterapkan pada ${this.localName}`);
-    }
+  constructor(){
+    super()
+    updateWhenLocaleChanges(this)
   }
 
   firstUpdated(){
@@ -41,7 +36,7 @@ class SearchBar extends LitWithoutShadowDom {
   render() {
     return html`
       <form class="d-flex me-lg-5" id="searchForm" role="search">
-        <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
+        <input class="form-control me-2" id="searchInput" type="search" placeholder="${msg("Search ")}" aria-label="Search" />
         <button class="btn btn-outline-success" id="searchButton" type="submit">${this.content}</button>
       </form>
     `;

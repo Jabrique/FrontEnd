@@ -1,4 +1,4 @@
-import {html, LitElement} from 'lit'
+import {html, LitElement, css} from 'lit'
 import { allLocales } from "../../../generated/locale-codes";
 import { getLocale, localeNames, setLocaleFromUrl } from "../../localization";
 
@@ -7,8 +7,15 @@ import {updateWhenLocaleChanges} from '@lit/localize'
 class LocalePicker extends LitElement{
     constructor(){
         super()
-        updateWhenLocaleChanges()
+        updateWhenLocaleChanges(this)
     }
+
+    static styles=css`
+    select{
+        padding: 10px;
+        border-radius: 8px;
+    }
+    `
 
     render(){
         return html`

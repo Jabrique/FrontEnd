@@ -3,6 +3,11 @@ import {msg, updateWhenLocaleChanges} from '@lit/localize'
 
 class FooterApp extends LitElement{
     static styles=css`
+    :host{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     p{
         color: white;
         text-align: center;
@@ -11,11 +16,12 @@ class FooterApp extends LitElement{
 
     constructor(){
         super()
-        updateWhenLocaleChanges()
+        updateWhenLocaleChanges(this)
     }
     render(){
         return html`
-        <p>${msg(`Dibuat oleh seseorang`)}</p>
+        <locale-picker></locale-picker>
+        <p>${msg(`Made by someone`)}</p>
         `
     }
 }
