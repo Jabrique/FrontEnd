@@ -9,14 +9,13 @@ import {
   query,
   updateDoc,
   where,
+  setDoc
 } from 'firebase/firestore';
  
 const Transactions = {
   async getAll() {
-    console.log(auth)
-    const transactionsRef = collection(db, 'transactions');
-    const transactionsQuery = query(transactionsRef, where('userId', '==', auth.currentUser.uid));
-    const querySnapshot = await getDocs(transactionsQuery);
+    const transactionsRef = collection(db, 'users', auth.currentUser.uid, 'transactions');
+    const querySnapshot = await getDocs(transactionsRef);
     const transactions = [];
     querySnapshot.forEach((item) => {
       transactions.push({
@@ -24,6 +23,7 @@ const Transactions = {
         ...item.data(),
       });
     });
+
     return transactions;
   },
   async getById(id) {
@@ -33,12 +33,10 @@ const Transactions = {
   },
  
   async store({ name, date, amount, type, description, evidence }) {
-    const transactionsRef = collection(db, 'transactions');
     const data = { name, date, amount, type, description, evidence };
-    return await addDoc(transactionsRef, {
-      ...data,
-      userId: auth.currentUser.uid,
-    });
+    const transactionsRef = collection(db, 'users', auth.currentUser.uid, 'transactions');
+    return await addDoc(transactionsRef, data);
+
   },
  
   async update({ id, name, date, amount, type, description, evidence }) {

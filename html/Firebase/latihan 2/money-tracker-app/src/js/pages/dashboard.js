@@ -134,6 +134,7 @@ const Dashboard = {
   },
 
   _templateBodyTable(index, transactionRecord) {
+    console.log(transactionRecord.date.toDate().toDateString())
     return `
       <tr>
         <th class="text-center">${parseInt(index, 10) + 1}</th>
