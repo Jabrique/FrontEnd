@@ -40,9 +40,8 @@ const Edit = {
 
     try {
       const response = await Transactions.getById(transactionId);
-      const responseRecords = response.data.results;
-
-      this._populateTransactionToForm(responseRecords);
+    
+      this._populateTransactionToForm(response);
     } catch (error) {
       console.error(error);
     }
@@ -71,9 +70,13 @@ const Edit = {
       console.log(formData);
 
       try {
+        if (!formData.evidence) {
+          delete formData.evidence;
+        }
+
         const response = await Transactions.update({
-          id: this._getTransactionId(),
           ...formData,
+          id: this._getTransactionId(),
         });
         window.alert(`Transaction with id ${this._getTransactionId()} has been edited`);
 
@@ -108,6 +111,7 @@ const Edit = {
         `Parameter transactionRecord should be an object. The value is ${transactionRecord}`,
       );
     }
+    console.log(transactionRecord.date)
 
     const nameInput = document.querySelector('#validationCustomRecordName');
     const amountInput = document.querySelector('#validationCustomAmount');
