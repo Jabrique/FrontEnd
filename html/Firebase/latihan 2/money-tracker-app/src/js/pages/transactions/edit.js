@@ -111,7 +111,7 @@ const Edit = {
         `Parameter transactionRecord should be an object. The value is ${transactionRecord}`,
       );
     }
-    console.log(transactionRecord.date)
+    console.log(transactionRecord.date.toDate().toISOString())
 
     const nameInput = document.querySelector('#validationCustomRecordName');
     const amountInput = document.querySelector('#validationCustomAmount');
@@ -125,7 +125,7 @@ const Edit = {
 
     nameInput.value = transactionRecord.name;
     amountInput.value = transactionRecord.amount;
-    dateInput.value = transactionRecord.date.slice(0, 16);
+    dateInput.value = transactionRecord.date.toDate().toISOString().slice(0, 16);
 
     inputImagePreviewEdit.setAttribute('defaultImage', transactionRecord.evidenceUrl);
     inputImagePreviewEdit.setAttribute('defaultImageAlt', transactionRecord.name);

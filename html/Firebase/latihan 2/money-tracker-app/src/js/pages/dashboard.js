@@ -128,7 +128,7 @@ const Dashboard = {
     typeDetailRecord.textContent =
       transactionRecord.type === 'income' ? 'Pemasukan' : 'Pengeluaran';
     nameDetailRecord.textContent = transactionRecord.name;
-    dateDetailRecord.textContent = transactionRecord.date;
+    dateDetailRecord.textContent = transactionRecord.date.toDate().toDateString();
     amountDetailRecord.textContent = transactionRecord.amount;
     descriptionDetailRecord.textContent = transactionRecord.description || '-';
   },
