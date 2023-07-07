@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="spinner-wrapper">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    <main class="min-vh-100 d-flex">
+        <div class="m-auto container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h1 class="text-center">Login</h1>
+
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label for="validationCustomRecordEmail" class="form-label">Email</label>
+                            <input-with-validation
+                              type="text"
+                              inputId="validationCustomRecordEmail"
+                              invalidFeedbackMessage="Wajib diisi"
+                              required
+                            ></input-with-validation>
+                        </div>
+                        <div class="mb-3">
+                            <label for="validationCustomRecordPassword" class="form-label">Password</label>
+                            <input-group-password
+                            type="Password"
+                            InputId="validationCustomRecordPassword"
+                            inputGroupIcon="bi bi-eye-slash"
+                            invalidFeedbackMessage="Wajib diisi"
+                            validation
+                            required></input-group-password>
+                        </div>
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-dark ">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="mt-4 text-center">
+                        Don't Have An Account? <a href="/auth/register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
