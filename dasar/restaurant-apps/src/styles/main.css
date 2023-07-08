@@ -4,10 +4,37 @@
   box-sizing: border-box;
 }
 
+*:focus-visible{
+  outline-color: black;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   min-height: 300vh;
 }
+
+/* skip to content button */
+.skip-to-content{
+  position: absolute;
+  top: -40px;
+  left: 5px;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.skip-to-content:focus{
+  top: 5px;
+}
+
+
+/* navbar */
 
 .logo{
   font-size: 24px;
@@ -44,6 +71,13 @@ nav{
   position: relative;
 }
 
+.hamburger{
+  background-color: transparent;
+  border: 0;
+  padding: 5px 3px 1px 3px;
+  display: none;
+}
+
 .hamburger span{
   width: 24px;
   height: 3px;
@@ -51,7 +85,7 @@ nav{
   margin-bottom: 5px;
   border-radius: 3px;
   transition: 0.3s ease;
-  display: none;
+  display: block;
 }
 
 .clicked span:nth-child(1){
@@ -108,21 +142,78 @@ header.scrolled{
 }
 
 #restaurant{
-  margin-top: 4rem;
+  padding-top: 5rem;
   text-align: center;
+}
+
+#restaurant h2{
+  margin-bottom: 4rem;
 }
 
 .restaurant-list{
   display: grid;
-  gap: 15px;
+  gap: 16px;
+  padding: 32px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .restaurant-item{
-  width: ;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  border-radius: 5px 5px 3px 3px;
+  margin-bottom: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-img{
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-image: url('../public/images/heros/hero-image_2.jpg');
+}
+
+.restaurant-text{
+  text-align: left;
+  padding: 15px 20px;
+}
+
+.restaurant-city{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  box-shadow: inset -1px 0 4px 0 rgba(0, 0, 0, .2);
+}
+
+.restaurant-rating{
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+.restaurant-name{
+  font-size: 30px;
+  margin-bottom: 0.5em;
+}
+
+.restaurant-text p {
+  line-height: 1.5em;  
+  font-size: 16px;
+}
+
+footer{
+  margin-top: 5em;
+  padding: 30px;
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 @media screen and (max-width:576px) {
-  .hamburger span{
+  .hamburger{
     display: block;
   }
 
@@ -154,5 +245,27 @@ header.scrolled{
 
   .hero-image{
     background-position-x: 75%;
+  }
+}
+
+@media screen and (min-width:768px){
+  .restaurant-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-img{
+    height: 13rem;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .restaurant-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant-img{
+    height: 15rem;
   }
 }

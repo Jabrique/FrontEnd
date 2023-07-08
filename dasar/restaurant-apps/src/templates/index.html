@@ -6,20 +6,21 @@
   <title>Restaurant App</title>
 </head>
 <body>
+  <a href="#restaurant" class="skip-to-content">Skip To Content</a>
   <header>
-    <h1 class="logo">Restaurant</h1>
+    <h1 class="logo" aria-label="Restaurant App Logo" tabindex="0">Restaurant</h1>
     <nav>
       <ul class="nav-list">
-        <li class="nav-item"><a href="">Home</a></li>
+        <li class="nav-item"><a href="#Home">Home</a></li>
         <li class="nav-item"><a href="">Favorite</a></li>
         <li class="nav-item"><a href="">About Us</a></li>
       </ul>
     </nav>
-    <div class="hamburger">
+    <button class="hamburger" aria-label="hamburger button">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   </header>
   
   <!-- hero -->
@@ -29,12 +30,15 @@
 
   <!-- Restaurant -->
   <section id="restaurant">
-    <h2>Explore Restaurant</h2>
+    <h2 tabindex="0">Explore Restaurant</h2>
     <div class="restaurant-list">
-      <div class="restaurant-item">
-        <img src="../public/images/heros/hero-image_1.jpg" alt="">
-      </div>
+      
     </div>
   </section>
+
+  <!-- footer -->
+  <footer>
+    <p tabindex="0">copyright &#169 2023 - Restaurant Apps</p>
+  </footer>
 </body>
 </html>
