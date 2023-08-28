@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: #202124;
+  color: white;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 12px 0;
+  padding: 12px;
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-weight: bold;
+}
+
+
+/* header */
+
+.note-app__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  border-bottom: 1px solid #aaa;
+}
+
+.note-app__header h1 {
+  margin: 8px 0;
+  flex: 1;
+  color: white;
+}
+
+/* body */
+
+.note-app__body {
+  margin: 16px 10px;
+}
+
+.note-app__body h2{
+  font-weight: normal;
+  margin: 16px;
+}
+
+/* note-input */
+
+.note-input{
+  display: flex;
+  flex-direction: column;
+  margin: 28px auto;
+  margin-bottom: 44px;
+  max-width: 500px;
+}
+
+.note-input input, .note-input textarea {
+  width: 100%;
+}
+
+.note-input__title{
+  font-weight: normal;
+  margin: 16px 0;
+}
+
+.note-input__title__char-limit{
+  color: #aaa;
+  text-align: right;
+  font-size: 14px;
+}
+
+.note-input__body{
+  min-height: 175px;
+  margin-top: 0;
+}
+
+.note-input__button{
+  background-color: transparent;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* note-list */
+
+.note-list{
+  display: grid;
+  margin: 15px 0;
+  margin-bottom: 52px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.note-list__empty-message{
+  color: #aaa;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* note-item */
+
+.note-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.note-item__content{
+  flex: 1;
+  padding: 12px;
+}
+
+.note-item__date{
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.note-item__body{
+  font-size: 14px;
+}
+
+.note-item__button {
+  display: flex;
+}
+
+.note-item__delete-button,
+.note-item__archive-button {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid #aaa;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-item__delete-button{
+  color: #ff5f52;
+  border-right: 1px solid #aaa;
+}
+
+.note-item__archive-button {
+  color: #fff263;
+}
+
+.note-item__archive-button:hover {
+  color: #c49000;
+}
+
+.note-item__delete-button:hover {
+  color: #b00020;
+}

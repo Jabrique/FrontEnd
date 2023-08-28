@@ -1,0 +1,143 @@
+@media screen and (min-width: 1500px) {
+    .hero__text{
+        max-width: 30%;
+    }
+
+    .hero__text__title{
+    font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .logo{
+    padding: 40px;
+    width: 160px;
+    background-color: #FD8F5F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18%;
+    }
+
+    .search-bar{
+    display: flex;
+    gap: 30px;
+    }
+
+    .search-bar__form__input{
+    background-color: transparent;
+    padding-bottom: 8px;
+    border: 0;
+    width: 80%;
+    }
+
+    .search-bar__form{
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    width: 10em;
+    }
+
+    a{
+        font-size: 12px;
+    }
+
+    .bag{
+    width: 55px;
+    }
+
+    .bag span{
+    position: absolute;
+    bottom: -8px;
+    line-height: 20px;
+    right: 50%;
+    }
+
+    .hero__text__title{
+        font-size: 3em;
+    }
+
+    .container{
+        max-width: 900px;
+    }
+
+    .card-image{
+        background-size: contain;
+    }
+
+    .best-furn-manufacturer__text{
+    padding: 70px 50px;
+    width: 35%;
+    }
+
+    .best-furn-manufacturer__text__title{
+    font-weight: bolder;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+    .best-furn-manufacturer__text__paragraf{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    }
+
+    .insta{
+    padding: 5em 3em 0 5em;
+    display: flex;
+    height: 70vh;
+    gap: 50px;
+    margin-bottom: 5em;
+    }
+
+    .insta__text__title{
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 20px;
+    }
+
+    .insta__text__paragraf{
+    font-size: 14px;
+    }
+
+    .footer__container{
+    display: flex;
+    padding: 7em 8em;
+    gap: 10em;
+    background-color: #1d2547;
+    }
+
+    .profile {
+    width: 40%;
+    }
+
+    .profile__paragraf {
+    padding: 0 0 0 55px;
+    color: #c2c5DB;
+    line-height: 25px;
+    margin-bottom: 30px;
+    }   
+
+    .medsos-icon{
+    padding: 0 0 0 55px;
+    }
+
+    .medsos-icon .bi {
+    padding: 7px;
+    }
+
+    .profile .logo{
+    padding: 0 20px 40px 55px;
+    }
+
+    .footer__copyright{
+    margin-top: 1em;
+    font-size: 14px;
+    text-align: center;
+    color: #c2c5DB;
+    }
+}

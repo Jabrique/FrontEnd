@@ -1,0 +1,562 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* header */
+
+header { 
+    padding: 40px 20px;
+    background-color: #f2e1d9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo{
+    padding: 40px 55px;
+    width: 200px;
+    background-color: #FD8F5F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.logo__text {
+    border: 2px solid white;
+    padding: 20px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo__text p {
+    font-size: 20px;
+}
+
+.logo__text span {
+    letter-spacing: 8px;
+}
+
+.nav-list { 
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item{
+    list-style-type: none;
+}
+
+.search-bar{
+    display: flex;
+    gap: 30px;
+}
+
+.search-bar__form{
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.search-bar__form__input{
+    background-color: transparent;
+    padding-bottom: 8px;
+    border: 0;
+}
+
+.search-bar__form__input:focus{
+    outline: none;
+}
+
+.search-bar__form__submitButton{
+    background-color: transparent;
+    border: 0;
+}
+
+.bag{
+    background-image: url(../public/image/card.svg);
+    background-repeat: no-repeat;
+    width: 100px;
+    position: relative;
+}
+
+.bag span{
+    position: absolute;
+    bottom: -8px;
+    right: 70%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #FD8F5F;
+    color: white;
+}
+
+
+/* hero section */
+
+.hero{
+    background-color: #f2e1d9;
+    width: 100%;
+    height:90vh;
+    position: relative;
+    padding-right: 5vw;
+    z-index: -1;
+    margin-bottom: 10em;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+}
+
+.hero__image{
+    background-image: url(../public/image/heroImage.jpg);
+    display: block;
+    height: 90%;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__text{
+    position: absolute;
+    max-width: 50%;
+    height: 55%;
+    background-color: white;
+    top: 20%;
+    left: 16%;
+    padding: 50px;
+}
+
+.hero__text__discount{
+    color: #7F85A8;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero__text__title{
+    font-size: 4em;
+    font-weight: 900;
+}
+
+.hero__text__paragraf{
+    color: #646D77;
+    font-size: 16px;
+    width: 70%;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.hero__text a{
+    padding: 15px 40px;
+    background-color: #FD8F5F;
+    color: whitesmoke;
+}
+
+
+/* popular products section */
+
+.container{
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 10em;
+}
+
+.container__text{
+    max-width: 50%;
+    margin: auto;
+}
+
+.container__text__title{
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.container__text__paragraf{
+    color: #646D77;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 8em;
+}
+
+.popular-products-list{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #E7EBF2;
+    margin-bottom: 50px;
+}
+
+.popular-products-list__item{
+    padding: 20px 35px;
+    position: relative;
+}
+
+.popular-products-list__item:nth-child(1):after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: #FD8F5F;
+    height: 2px;
+}
+
+.popular-products-list__item a{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/* card */
+.populer-products-cardList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.card{
+    border: 1px solid rgba(0, 0, 0, .04);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20em;
+    display: block;
+}
+
+.populer-products-cardList__card:nth-child(1) .card-image{
+    background-image: url(../public/image/sofa1.jpg);
+}
+.populer-products-cardList__card:nth-child(2) .card-image{
+    background-image: url(../public/image/sofa2.jpg);
+}
+.populer-products-cardList__card:nth-child(3) .card-image{
+    background-image: url(../public/image/sofa3.jpg);
+}
+
+.card-title{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.card-price{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* best furn manufacturer section */
+.best-furn-manufacturer{
+    display: flex;
+    background-color: #F2E1D9;
+    margin-bottom: 10em;
+    height: 60vh;
+}
+.best-furn-manufacturer__image{
+    background-image: url(../public/image/sofa4.jpg);
+    width: 55%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.best-furn-manufacturer__text{
+    padding: 120px 50px;
+    width: 30%;
+}
+
+.best-furn-manufacturer__text__title{
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.best-furn-manufacturer__text__paragraf{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.best-furn-manufacturer__text__discover{
+    padding: 20px 60px;
+    background-color: #FD8F5F;
+    color: whitesmoke;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* product you may like section */
+.product-you-may-like-cardList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 5em;
+}
+
+.product-you-may-like-cardList__card:nth-child(1) .card-image{
+    background-image: url(../public/image/sofa5.jpg);
+    background-size: cover;
+    margin-bottom: 25px;
+}
+.product-you-may-like-cardList__card:nth-child(2) .card-image{
+    background-image: url(../public/image/sofa6.jpg);
+    background-size: cover;
+    margin-bottom: 25px;
+}
+.product-you-may-like-cardList__card:nth-child(3) .card-image{
+    background-image: url(../public/image/sofa7.jpg);
+    background-size: cover;
+    margin-bottom: 25px;
+}
+
+.discover-button{
+    padding: 25px 60px;
+    border: 1.5px solid #FD8F5F;
+    color: #FD8F5F;
+    cursor: pointer;
+}
+
+/* insta section */
+.insta{
+    padding: 5em 3em 0 15em;
+    display: flex;
+    height: 70vh;
+    gap: 50px;
+    margin-bottom: 5em;
+}
+
+.insta__content{
+    width: 40%;
+}
+
+.insta__image{
+    background-image: url(../public/image/insta.jpg);
+    height:80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+    margin-bottom: 20px;
+}
+
+.insta__text{
+    width: 100%;
+}
+
+.insta__text__title{
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.insta__text__paragraf{
+    font-size: 18px;
+    color: #7F85A8;
+    line-height: 25px;
+    margin-bottom: 4em;
+}
+
+.insta__post{
+    width: 100%;
+    background-color: #646D77;
+    display: flex;
+}
+
+.insta__post__image:nth-child(1){
+    background-image: url(../public/image/sofa8.jpg);
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.insta__post__image:nth-child(2){
+    background-image: url(../public/image/sofa9.jpg);
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* top pick section */
+.top-pick-cardList{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5em;
+}
+
+.top-pick-cardList__card:nth-child(1) .card-image{
+    background-image: url(../public/image/sofa10.jpg);
+}
+.top-pick-cardList__card:nth-child(2) .card-image{
+    background-image: url(../public/image/sofa11.jpg);
+}
+.top-pick-cardList__card:nth-child(3) .card-image{
+    background-image: url(../public/image/sofa12.jpg);
+}
+
+.services{
+    width: 100%;
+    height: 40vh;
+    background-color: #f2e1d9;
+    position: relative;
+}
+
+.services::after{
+    content: "";
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+}
+
+.services__list{
+    display: flex;
+    justify-content: center;
+    padding: 7em;
+    gap: 100px;
+}
+
+.service1 .services__service__image{
+    background-image: url(../public/image/services1.svg);
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.service2 .services__service__image{
+    background-image: url(../public/image/services2.svg);
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.service3 .services__service__image{
+    background-image: url(../public/image/services3.svg);
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.service4 .services__service__image{
+    background-image: url(../public/image/services4.svg);
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.services__service__title{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.services__service__paragraf{
+    color: #7F85A8;
+    font-size: 16px;
+}
+
+/* footer */
+footer{
+    background-color: #1d2547;
+    height: 70vh;
+    position: relative;
+    color: white;
+}
+
+footer:before{
+    content: "";
+    width: 50px;
+    height: 100%;
+    background-color: #F2E1D9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer__container{
+    display: flex;
+    padding: 10em 20em;
+    gap: 10em;
+}
+
+.profile {
+    width: 30%;
+}
+
+.profile .logo{
+    position: static;
+    padding: 0 55px 40px 55px;
+    background-color: transparent;
+}
+
+.profile .logo .logo__text{
+    border-color: #FD8F5F;
+    color: #FD8F5F;
+}
+
+.profile__paragraf {
+    padding: 0 55px;
+    color: #c2c5DB;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+.medsos-icon{
+    padding: 0 55px;
+}
+
+.medsos-icon .bi {
+    width: fit-content;
+    border: 1px solid white;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.footer-links p{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.footer-links ul li a {
+    color: #c2c5DB;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footer__copyright{
+    margin-top: 3em;
+    font-size: 15px;
+    text-align: center;
+    color: #c2c5DB;
+}
