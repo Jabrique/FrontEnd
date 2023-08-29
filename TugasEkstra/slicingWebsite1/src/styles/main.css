@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    
 }
 
 body { 
@@ -16,6 +15,7 @@ body {
 header { 
     padding: 40px 20px;
     background-color: #f2e1d9;
+    overflow-x: hidden;
 }
 
 nav {
@@ -92,12 +92,14 @@ a{
     background-image: url(../public/image/card.svg);
     background-repeat: no-repeat;
     width: 100px;
+    height: 35px;
     position: relative;
+    overflow-y: hidden;
 }
 
 .bag span{
     position: absolute;
-    bottom: -8px;
+    bottom: 1px;
     right: 70%;
     display: block;
     width: 20px;
@@ -116,7 +118,6 @@ a{
     width: 100%;
     height:90vh;
     position: relative;
-    padding-right: 5vw;
     z-index: -1;
     margin-bottom: 10em;
 }
@@ -133,6 +134,7 @@ a{
 .hero__image{
     background-image: url(../public/image/heroImage.jpg);
     display: block;
+    width: 95%;
     height: 90%;
     background-size: cover;
     position: relative;
@@ -158,6 +160,7 @@ a{
 .hero__text__title{
     font-size: 4em;
     font-weight: 900;
+    width: 80%;
 }
 
 .hero__text__paragraf{
@@ -244,6 +247,7 @@ a{
 
 .card-image{
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 20em;
@@ -383,7 +387,6 @@ a{
 
 .insta__post{
     width: 100%;
-    background-color: #646D77;
     display: flex;
 }
 
@@ -393,6 +396,7 @@ a{
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
 
 .insta__post__image:nth-child(2){
@@ -487,6 +491,7 @@ a{
 /* footer */
 footer{
     background-color: #1d2547;
+    width: 100%;
     height: 70vh;
     position: relative;
     color: white;
