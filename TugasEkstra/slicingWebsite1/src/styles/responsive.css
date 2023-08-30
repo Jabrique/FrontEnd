@@ -18,7 +18,6 @@
 
     .hero__text{
     max-width: 50%;
-    height: 60%;
     }
 
     .best-furn-manufacturer__text{
@@ -43,7 +42,7 @@
     }
     
     .footer__container{
-    padding: 10em 7em;
+    padding: 7em;
     gap: 5em;
     }
 
@@ -59,17 +58,9 @@
     .medsos-icon{
         padding: 0 40px;
     }
-
-    .footer__copyright{
-    margin-top: -3%;
-    }
 }
 
 @media screen and (min-width: 1200px) {
-    .footer__copyright{
-    margin-top: -1.8%;
-    }
-
     nav{
         width: 85%;
     }
@@ -78,6 +69,5 @@
 @media screen and (min-width: 1400px) {
     .hero__text{
     max-width: 35%;
-    height: 60%;
     }
 }

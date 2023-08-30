@@ -143,7 +143,6 @@ a{
 .hero__text{
     position: absolute;
     max-width: 50%;
-    height: 55%;
     background-color: white;
     top: 20%;
     left: 16%;
@@ -560,7 +559,10 @@ footer:before{
 }
 
 .footer__copyright{
-    margin-top: 3em;
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 15px;
     text-align: center;
     color: #c2c5DB;
