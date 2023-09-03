@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    min-height: 1000vh;
+}
+
+header{
+    background-color: #f2e1d9;
+    padding: 30px;
+    width: 100%;
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header__logo{
+    background-color: #fb8f61;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+.header__logoText{
+    padding: 10px;
+    border: 1.5px solid white;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.header__logoText span{
+    letter-spacing: 10px;
+    line-height: 18px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    background-color: #4c4c4c;
+}
+
+.nav__menuButton{
+    display: flex;
+    justify-content: end;
+}
+
+.nav__menuContent{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: black;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.nav__menuButton p {
+    color: white;
+    font-weight: bold;
+}
+
+.nav__hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav__menuButton span{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+.nav-list{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.nav-list__item a{
+    color: white;
+}
+
+.nav-list--show{
+    display: flex;
+}
+
+.header__account{
+    position: absolute;
+    width: fit-content;
+    bottom: -85px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header__myAccount{
+    font-weight: bold;
+    margin-left: -40px;
+}
+
+.header__wishlist{
+    background-image: url(image/cart.svg);
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    margin-left: 30px;
+    position: relative;
+}
+
+.header__wishlist p {
+    background-color: #fb8f61;
+    padding: 3px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    right: -5px;
+    color: white;
+}
+
+.furn-search__form{
+    display: flex;
+}
+
+.furn-search__input{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    width: 65%;
+}
+
+.furn-search__input::placeholder{
+    color: white;
+}
+
+.furn-search__input:focus-visible{
+    outline: none;
+}
+
+.furn-search__image{
+    background-image: url(/image/search.svg);
+    width: 20px;
+    height: 18px;
+    background-repeat: no-repeat;
+}
+
+/* hero */
+
+.hero{
+    position: relative;
+    z-index: -1;
+}
+
+.hero__image{
+    height: 80vh;
+    width: 100%;
+}
+
+.hero__box{
+    position: absolute;
+    top: 20%;
+    width: 90%;
+    padding: 60px 30px;
+    background-color: white;
+}
+
+.hero__discount{
+    color: #7f85a8;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.hero__title{
+    font-weight: bolder;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.hero__text{
+    font-size: 18px;
+    line-height: 30px;
+    color: #6E7880;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.discover-button{
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    background-color: #FD8F5F;
+    color: white;
+    font-weight: bold;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.furn-populer-products{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.furn-populer-products__title{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.furn-populer-products__text{
+    font-size: 16px;
+    text-align: center;
+    color: #7f85a8;
+    margin-bottom: 50px;
+}
+
+.furn-populer-products__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid #f6f8fe;
+}
+
+.furn-populer-products__item{
+    padding: 20px;
+}
+
+.furn-populer-products__item a{
+    color: black;
+}
+
+.furn-populer-products__item--active{
+    border-bottom: 2px solid #fb8f61;
+    color: #fb8f61;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.product-item{
+    border: 1px solid #f6f8fe;
+    text-align: center;
+}
+
+.product-item__title{
+    margin-bottom: 20px;
+}
+
+.product-item__price{
+    color: #670063;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product-item__image{
+    width: 100%;
+    height: 250px;
+}
+
+.furn-best-manufacturer__image{
+    background-image: url(/image/sofa1.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+.furn-best-manufacturer__description{
+    padding: 50px 30px;
+    background-color: #F2E1D9;
+}
+
+.furn-best-manufacturer__title{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.furn-best-manufacturer__text{
+    color: #010A44;
+    margin-bottom: 30px;
+    width: 95%;
+}
+
+.furn-best-manufacturer .discover-button{
+    margin-top: 10px;
+}
+
+.furn-products-may-like{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.furn-products-may-like__title{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.furn-products-may-like__text{
+    font-size: 16px;
+    text-align: center;
+    color: #7f85a8;
+    margin-bottom: 50px;
+}
+
+.furn-products-may-like__discoverButton{
+    margin: auto;
+    width: fit-content;
+}
+
+.furn-products-may-like .discover-button{
+    background-color: transparent;
+    border: 1px solid #fb8f61;
+    color: #fb8f61;
+    margin-top: 50px;
+}
+
+.furn-instagram{
+    margin-top: 6em;
+}
+
+.furn-instagram__logo{
+    background-image: url(/image/insta.jpg);
+    width: 20%;
+    height: 10vh;
+    background-repeat: no-repeat;
+}
+
+.furn-instagram__title{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.furn-instagram__text{
+    color: #7f85a8;
+    font-size: 16px;
+}
+
+.furn-instagram .discover-button{
+    margin-top: 40px;
+    background-color: transparent;
+    border: 1px solid #fb8f61;
+    color: #fb8f61;
+    margin-bottom: 40px;
+}
+
+.furn-instagram__imageContainer{
+    height: 90vh;
+    width: 100%;
+}
+
+.furn-instagram__image1,
+.furn-instagram__image2{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+}
+
+.furn-instagram__image1{
+    background-image: url(/image/sofa2.jpg);
+}
+
+.furn-instagram__image2{
+    background-image: url(/image/sofa3.jpg);
+}
+
+.furn-top-pick{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.furn-top-pick__title{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.furn-top-pick__text{
+    font-size: 16px;
+    text-align: center;
+    color: #7f85a8;
+    margin-bottom: 50px;
+}
+
+.furn-top-pick__discoverButton{
+    width: fit-content;
+    margin: auto;
+}
+
+.furn-top-pick .discover-button{
+    background-color: transparent;
+    border: 1px solid #fb8f61;
+    color: #fb8f61;
+    margin-top: 50px;
+}
+
+.furn-services{
+    background-color: #F2E1D9;
+    width: 100%;
+    height: 95vh;
+    padding: 40px 20px;
+}
+
+.furn-services__item{
+    margin-bottom: 50px;
+}
+
+.furn-services__image1,
+.furn-services__image2,
+.furn-services__image3,
+.furn-services__image4{
+    width: 18%;
+    background-repeat: no-repeat;
+    height: 6vh;
+    margin-bottom: 20px;
+}
+
+.furn-services__image1{
+    background-image: url(/image/services1.svg);
+}
+
+.furn-services__image2{
+    background-image: url(/image/services2.svg);
+}
+
+.furn-services__image3{
+    background-image: url(/image/services3.svg);
+}
+
+.furn-services__image4{
+    background-image: url(/image/services4.svg);
+}
+
+.furn-services__title{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.furn-services__text{
+    color: #7f85a8;
+    font-size: 16px;
+}
+
+footer{
+    background-color: #1D2547;
+    width: 100%;
+    height: 120vh;
+    color: #C2C5DB;
+    padding: 50px 20px;
+    position: relative;
+}
+
+footer .header__logo{
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+footer .header__logoText{
+    border: 2px solid #fb8f61;
+    padding: 8px 20px;
+    color: #fb8f61;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.footer__profile{
+    margin-bottom: 50px;
+}
+
+.footer__text{
+    width: 80%;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.footer__socials{
+    display: flex;
+}
+
+.footer__twitter,
+.footer__faceBook,
+.footer__pinterest{
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 18px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer__twitter{
+    background-image: url(image/twitter.svg);
+}
+
+.footer__faceBook{
+    background-image: url(image/faceBook.svg);
+}
+
+.footer__pinterest{
+    background-image: url(image/pinterest.svg);
+}
+
+.footer__links{
+    margin-bottom: 50px;
+}
+
+.footer__links h4{
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footer__links ul li{
+    margin-bottom: 20px;
+}
+
+.footer__links ul li a{
+    color: #7f85a8;
+}
+
+.footer__copyright{
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    width: 90%;
+}
+
+.furn-to-top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 999;
+    background-color: #fb8f61;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.furn-to-top__image{
+    background-image: url(/image/toTop.PNG);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
