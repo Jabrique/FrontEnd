@@ -4,7 +4,7 @@ import FurnNavLink from "./FurnNavLink"
 function FurnNavLinks({className}){
     return (
         <ul className={className}>
-            <FurnNavLink link={"home"}></FurnNavLink>
+            <FurnNavLink link={"Home"}></FurnNavLink>
             <FurnNavLink link={"Product"}></FurnNavLink>
             <FurnNavLink link={"About"}></FurnNavLink>
             <FurnNavLink link={"Page"}></FurnNavLink>

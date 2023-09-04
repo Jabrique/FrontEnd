@@ -55,7 +55,7 @@ function FurnFooter() {
           </li>
         </ul>
       </div>
-      <p className="footer__copyright">Copyright &copy2023 All rights reserved | This template is made with love</p>
+      <p className="footer__copyright">Copyright &copy;2023 All rights reserved | This template is made with love</p>
     </footer>
   );
 }

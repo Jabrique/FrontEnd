@@ -1,6 +1,6 @@
 import React from "react";
 
-function FurnDiscoverButton({href}){
+function FurnDiscoverButton({href=""}){
     return (
         <a 
         href={href} 

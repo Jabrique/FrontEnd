@@ -1,0 +1,261 @@
+@media screen and (min-width: 768px) {
+    .header__account{
+        bottom: 15px;
+        right: 100px;
+    }
+
+    .header__myAccount{
+        margin-left: 80px;
+    }
+
+    .furn-search__input{
+        width: 90%;
+        color: black;
+    }
+
+    .furn-search__image{
+        background-image: url(/image/searchBlack.svg);
+    }
+
+    .furn-search__input::placeholder{
+        color: black;
+    }
+    
+    .hero__box{
+        width: 60%;
+    }
+
+    .product-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .furn-instagram__description{
+        width: 50%;
+    }
+
+    .furn-instagram__imageContainer{
+        display: flex;
+        height: 50vh;
+    }
+    
+    .furn-instagram__image1,
+    .furn-instagram__image2{
+        width: 50%;
+        height: 100%;
+    }
+
+    .furn-services__servicesList{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .header__logo{
+        margin-bottom: 30px;
+    }
+
+    .footer__text{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo{
+        padding: 25px 30px;
+    }
+
+    .header__logoText{
+        padding: 15px 20px;
+    }
+    nav{
+        position: static;
+        background-color: transparent;
+    }
+
+    .nav__menuButton{
+        display: none;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        margin-left: 13vw;
+    }
+
+    .nav-list__item a{
+        color: black;
+    }
+
+    .header__account{
+        position: static;
+        align-items: center;
+    }
+
+    .header__myAccount{
+        margin-left: 30px;
+    }
+
+    .furn-search{
+        border-bottom: 0.1px solid #C2B6BB;
+        padding: 5px 0 10px 0;
+    }
+
+    .furn-search__input::placeholder{
+        color: #010A44;
+    }
+
+    .hero__box{
+        left: 10px;
+        max-width: 500px;
+        padding: 40px 60px;
+    }
+
+    .hero{
+        background-color: #F2E1D9;
+        height: 110vh;
+    }
+
+    .hero::before{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        content: "";
+        width: 100px;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .hero__image{
+        height: 90%;
+        width: 95%;
+    }
+
+    .hero__title{
+        font-size: 4em;
+    }
+
+    .furn-populer-products__text{
+        width: 60%;
+        margin: auto;
+    }
+
+    .product-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-item__title{
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: 20px;
+    }
+
+    .furn-best-manufacturer{
+        display: flex;
+        height: 60vh;
+    }
+
+    .furn-best-manufacturer__image{
+        height: 100%;
+    }
+
+    .furn-best-manufacturer__description{
+        padding: 100px 50px;
+    }
+
+    .furn-best-manufacturer__title{
+        font-size: 3em;
+    }
+
+    .furn-products-may-like__text{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .furn-instagram .container{
+        display: flex;
+    }
+
+    .furn-instagram__logo{
+        height: 10vh;
+    }
+
+    .furn-instagram__text{
+        width: 80%;
+    }
+
+    .furn-top-pick__text{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .furn-services__servicesList{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+
+    footer{
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px;
+    }
+
+    .footer__profile{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .nav-list{
+        margin-left: 8vw;
+        gap: 40px;
+    }
+    .hero__box{
+        left: 5vw;
+    }
+
+    .furn-instagram .container{
+        max-width: 100%;
+        width: 95%;
+    }
+
+    .furn-instagram__description{
+        padding-left: 150px;
+    }
+
+    .furn-services::after{
+        content: "";
+        width: 30px;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        bottom: 0;
+    }
+
+    footer{
+        padding: 100px;
+    }
+
+    footer::before{
+        content: "";
+        width: 30px;
+        height: 100%;
+        background-color: #F2E1D9;
+        position: absolute;
+    }
+}
