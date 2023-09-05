@@ -4,6 +4,31 @@
         right: 100px;
     }
 
+    .header--sticky{
+        position: fixed;
+        top: 0;
+        padding: 45px;
+        animation: navbarSticky .5s ease forwards;
+    }
+
+    .header--sticky .header__account{
+        bottom: 45px;
+    }
+
+    .header--sticky .header__logo{
+        background-color: transparent;
+    }
+
+    .header--sticky .header__logoText{
+        border: 2px solid #fb8f61;
+        color: #fb8f61;
+        padding: 10px 15px;
+    }
+
+    .header--sticky nav{
+        left: 15vh;
+    }
+
     .header__myAccount{
         margin-left: 80px;
     }
@@ -61,6 +86,15 @@
     .footer__text{
         width: 90%;
     }
+
+    @keyframes navbarSticky {
+        0%{
+            transform: translateY(-200px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -77,6 +111,12 @@
     .header__logoText{
         padding: 15px 20px;
     }
+
+    .header--sticky .header__logoText{
+        padding: 20px 25px;
+        font-size: 16px;
+    }
+
     nav{
         position: static;
         background-color: transparent;

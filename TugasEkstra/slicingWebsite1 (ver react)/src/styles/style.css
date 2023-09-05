@@ -9,11 +9,60 @@ body{
     font-size: 14px;
 }
 
+.furn-loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(247, 247, 247);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.furn-loading__circle{
+    padding: 30px 27px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.furn-loading__square{
+    padding: 12px 15px;
+    border: 2px solid #fb8f61;
+}
+
+.furn-loading p {
+    color: #fb8f61;
+    font-weight: bold;
+}
+
+.furn-loading span{
+    letter-spacing: 10px;
+}
+
+.furn-loading__circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid transparent;
+    border-top: 2px solid #fb8f61;
+    border-radius: 50%;
+    animation: spinner 1s infinite;
+}
+
 header{
     background-color: #f2e1d9;
     padding: 30px;
     width: 100%;
     position: relative;
+    z-index: 999;
 }
 
 ul{
@@ -228,16 +277,20 @@ nav{
     position: absolute;
     top: 0;
     left: 0%;
-    width: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 0;
+    background-color: #fb8f61;
     transition: 0.3s cubic-bezier(0, 1.35, 1, 1);
     z-index: -1;
 }
 
 .discover-button:hover::before{
-    z-index: 0;
-    width: 100%;
+    z-index: -1;
+    height: 100%;
+}
+
+a.discover-button:hover{
+    color: white;
 }
 
 .container{
@@ -270,6 +323,7 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     border-bottom: 1px solid #f6f8fe;
+    margin-bottom: 50px;
 }
 
 .furn-populer-products__item{
@@ -278,6 +332,10 @@ nav{
 
 .furn-populer-products__item a{
     color: black;
+}
+
+:not(.furn-populer-products__item--active).furn-populer-products__item:hover{
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
 }
 
 .furn-populer-products__item--active{
@@ -340,6 +398,17 @@ nav{
     margin-top: 10px;
 }
 
+.furn-best-manufacturer .discover-button::before{
+    width: 0;
+    height: 100%;
+}
+
+.furn-best-manufacturer .discover-button:hover::before{
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    z-index: 1;
+}
+
 .furn-products-may-like{
     margin-top: 5em;
     margin-bottom: 5em;
@@ -369,10 +438,6 @@ nav{
     border: 1px solid #fb8f61;
     color: #fb8f61;
     margin-top: 50px;
-}
-
-.furn-products-may-like .discover-button::before{
-    background-color: #fb8f61;
 }
 
 .furn-instagram{
@@ -616,4 +681,15 @@ footer .header__logoText{
     height: 50px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@keyframes spinner {
+    0%{
+        border-top: 2px solid #fb8f61;
+        transform: rotate(0);
+    }
+    100%{
+        border-top: 2px solid #fb8f61;
+        transform: rotate(360deg);
+    }
 }

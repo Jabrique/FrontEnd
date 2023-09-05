@@ -3,6 +3,7 @@ import FurnHeader from "./FurnHeader";
 import FurnBody from "./FurnBody";
 import Data from "../firebase/data";
 import FurnFooter from "./FurnFooter";
+import FurnLoadingPage from "./FurnLoadingPage";
 
 
 class FurnApp extends React.Component{
@@ -41,6 +42,7 @@ class FurnApp extends React.Component{
     render(){
         return (
             <div>
+                <FurnLoadingPage></FurnLoadingPage>
                 <FurnHeader></FurnHeader>
                 <FurnBody populerProducts={this.state.populerProducts} productsMayLike={this.state.productsMayLike} topPickProducts={this.state.topPickProducts} fetchPopularProducts={this.fetchPopulerProducts}></FurnBody>
                 <FurnFooter></FurnFooter>
