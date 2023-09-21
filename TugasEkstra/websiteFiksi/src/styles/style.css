@@ -1,0 +1,146 @@
+:root{
+    --primary: #654C45;
+    --secondary: #EAB567;
+    --tertiary: #9D7D5B;
+    --text: #9F4918;
+    --surface: #D9D9D9;
+    --background: #EDE8E4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 25.89px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    margin: 0 80px;
+}
+
+header{
+    border-bottom: 1px solid var(--secondary);
+    margin-bottom: 103px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; 
+}
+
+.header__logoText{
+    font-family: 'Bungee', cursive;
+    color: var(--tertiary);
+    font-size: 41px;
+    padding: 25px 0;
+}
+
+.header__logoText span{
+    color: var(--secondary);
+}
+
+.header__navList{
+    display: flex;
+    gap: 39px;
+}
+
+/* hero section */
+
+#hero{
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#hero .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero__text{
+    margin-right: 87px;
+    width: 696px;
+}
+
+.hero__title{
+    font-family: 'Bungee', cursive;
+    font-size: 67.78px;
+    color: var(--tertiary);
+    line-height: 81px;
+    margin: 26px 0;
+}
+
+.hero__title span{
+    color: var(--secondary);
+}
+
+.hero__paragraf{
+    font-size: 25.89px;
+    color: var(--text);
+    line-height: 42px;
+    width: 672px;
+    margin-bottom: 42px;
+    letter-spacing: 1.81px;
+}
+
+.hero__btn{
+    border-radius: 18px;
+    padding: 27px 100px;
+    font-size: 25.89px;
+    color: var(--text);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    margin-bottom: 66px;
+}
+
+.hero__imageContainer{
+    background-color: var(--secondary);
+    position: relative;
+    width: 465px;
+    height: 675px;
+    border-radius: 26px;
+}
+
+.hero__image{
+    background-image: url(../../public/images/heroImage.png);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: -31px;
+    left: -32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 26px;
+}
+
+.hero__decoration{
+    background-image: url(../../public/images/decoration1.png);
+    width: 236px;
+    height: 48px;
+}
+
+.hero__scrollDecoration{
+    background-image: url(../../public/images/scrollIcon.png);
+    width: 233px;
+    background-repeat: no-repeat;
+    height: 99px;
+    margin: 24px auto;
+}
+
