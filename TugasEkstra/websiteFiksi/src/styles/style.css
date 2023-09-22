@@ -144,3 +144,236 @@ header .container{
     margin: 24px auto;
 }
 
+#benefit{
+    padding-bottom: 65px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#benefit .container{
+    position: relative;
+}
+
+.benefit__title{
+    font-size: 41.89px;
+    width: fit-content;
+    margin: auto;
+    color: var(--tertiary);
+    position: relative;
+    margin-bottom: 86px;
+}
+
+.benefit__title::after{
+    content: "";
+    width: 90%;
+    height: 10px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary);
+}
+
+.benefit__list{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 24px;
+}
+
+.benefit__item{
+    border-radius: 26px;
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    padding-inline: 25px;
+    height: 400px;
+}
+
+.benefit__item:nth-child(2){
+    background-color: var(--secondary);
+}
+
+.benefit__item:nth-child(2) .benefit__text{
+    color: var(--background);
+}
+
+.benefit__item:nth-child(2) .benefit__logo{
+    background-image: url(../../public/images/tidakBerbahaya.svg);
+}
+
+.benefit__item:nth-child(3) .benefit__logo{
+    background-image: url(../../public/images/environmentFriendly.svg);
+}
+
+.benefit__logo{
+    background-image: url(../../public/images/chitin.svg);
+    width: 65px;
+    height: 65px;
+    margin: 54px auto 25px auto;
+}
+
+.benefit__text{
+    font-weight: 700;
+    font-size: 25.89px;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.benefit__paragraf{
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 400;
+    text-align: center;
+    line-height: 26px;
+    letter-spacing: 1.12px;
+}
+
+.benefit__decoration{
+    background-image: url(../../public/images/crab.svg);
+    width: 86.73px;
+    height: 86.73px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.benefit__decoration:nth-child(even){
+    right: 0;
+}
+
+.benefit__decoration:nth-child(odd){
+    transform: rotate(90deg);
+}
+
+.benefit__decoration:nth-child(5){
+    width: 43.37px;
+    height: 43.37px;
+    left: 10px;
+}
+
+.benefit__decoration:nth-child(6){
+    width: 43.37px;
+    height: 43.37px;
+    right: 10px;
+}
+
+#aboutUs{
+    border-bottom: 1px solid var(--secondary);
+    margin-bottom: 67px;
+}
+
+.aboutUs__title{
+    color: var(--primary);
+    font-size: 41.89px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    margin-bottom: 44px;
+    font-weight: 400;
+    line-height: 42.5px;
+    letter-spacing: 1.81px;
+}
+
+.aboutUs__title::after{
+    content:"";
+    width: 90%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary);
+}
+
+.aboutUs__text{
+    font-size: 25.89px;
+    color: var(--text);
+    max-width: 1157px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 43px;
+}
+
+.aboutUs__imgContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 956px;
+    height: 780px;
+    margin: auto;
+}
+
+.aboutUs__img{
+    border-radius: 26px;
+    background-image: url(../../public/images/produk.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+
+.aboutUs__img:nth-child(3){
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url(../../public/images/fotoTim.png);
+}
+
+.contact__title{
+    font-size: 41.89px;
+    color: var(--primary);
+    position: relative;
+    margin: auto;
+    margin-bottom: 98px;
+    width: fit-content;
+}
+
+.contact__title:after{
+    content:"";
+    height: 10px;
+    width: 90%;
+    background-color: var(--secondary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.contact__form{
+    display: flex;
+    width: 1064px;
+    height: 560px;
+    border-radius: 26px;
+    border: 2px solid var(--secondary);
+    margin: auto;
+    justify-content: space-between;
+}
+
+.contact__img{
+    background-image: url(../../public/images/produk.png);
+    width: 40%;
+    height: 100%;
+    border-radius: 26px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact__form form{
+    display: flex;
+    flex-direction: column;
+    padding: 54px;
+}
+
+.contact__inputEmail{
+    border: 1px solid var(--secondary);
+    border-radius: 13px;
+    margin-bottom: 18px;
+}
+
+.contact__message{
+    border-radius: 13px;
+    border: 1px solid var(--secondary);
+}
