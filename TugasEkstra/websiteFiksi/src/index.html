@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -18,12 +20,21 @@
 
         <nav>
           <ul class="header__navList">
-            <li><a href="header__navItem">Beranda</a></li>
-            <li><a href="header__navItem">Keunggulan</a></li>
-            <li><a href="header__navItem">Tentang kami</a></li>
-            <li><a href="header__navItem">Kontak</a></li>
+            <li class="header__navItem"><a href="#hero">Beranda</a></li>
+            <li
+            class="header__navItem"><a href="#benefit">Keunggulan</a></li>
+            <li
+            class="header__navItem"><a href="#aboutUs">Tentang kami</a></li>
+            <li
+            class="header__navItem"><a href="#contact">Kontak</a></li>
           </ul>
         </nav>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -33,7 +44,7 @@
           <div class="hero__text">
             <h2 class="hero__title">PAKAN TERNAK ? <span>PUYU</span> SOLUSINYA</h2>
             <p class="hero__paragraf">Produk pakan ternak alternatif berbahan dasar kepiting sawah yang dibuat sebagai solusi atas permasalahan harga pakan ternak yang tinggi</p>
-            <button class="hero__btn">Beli Sekarang</button>
+            <a href="https://wa.me/+6285732608099" target="_blank" class="hero__btn">Beli Sekarang</a>
             <div class="hero__decoration"></div>
           </div>
 
@@ -41,11 +52,11 @@
             <div class="hero__image"></div>
           </div>
 
-          <div class="hero__scrollDecoration"></div>
+          <div class="hero__scrollDecoration" data-aos="fade-up"></div>
         </div>
       </section>
 
-      <section id="benefit">
+      <section id="benefit" data-aos="fade-up">
         <div class="container">
           <div class="benefit__decoration"></div>
           <div class="benefit__decoration"></div>
@@ -73,26 +84,34 @@
       </section>
 
       <section id="aboutUs">
-        <h2 class="aboutUs__title">Tentang kami</h2>
-        <p class="aboutUs__text">"Puyu adalah pelopor dalam sektor pakan ternak. Kami menghasilkan produk pakan ternak dan tepung Puyu yang ramah lingkungan dan berkualitas tinggi. Kami berkomitmen untuk mendukung kesejahteraan ternak.”</p>
-        <div class="aboutUs__imgContainer">
+        <div class="aboutUs__decoration" data-aos="fade-right"></div>
+        <div class="aboutUs__decoration" data-aos="fade-up"></div>
+        <h2 class="aboutUs__title" data-aos="fade-up">Tentang kami</h2>
+        <p class="aboutUs__text" data-aos="fade-up">"Puyu adalah pelopor dalam sektor pakan ternak. Kami menghasilkan produk pakan ternak dan tepung Puyu yang ramah lingkungan dan berkualitas tinggi. Kami berkomitmen untuk mendukung kesejahteraan ternak.”</p>
+        <div class="aboutUs__imgContainer" data-aos="fade-up">
           <div class="aboutUs__img"></div>
           <div class="aboutUs__img"></div>
           <div class="aboutUs__img"></div>
         </div>
+        <div class="aboutUs__scrollDecoration"></div>
       </section>
 
       <section id="contact">
-        <h2 class="contact__title">Hubungi kami</h2>
-        <div class="contact__form">
+        <div class="contact__decoration" data-aos="fade-up"></div>
+        <div class="contact__decoration"
+        data-aos="fade-right"></div>
+        <h2 class="contact__title" data-aos="fade-up">Hubungi kami</h2>
+        <div class="contact__form" data-aos="fade-up">
           <form>
             <input type="email" class="contact__inputEmail" placeholder="Masukkan email anda" />
-            <textarea class="contact__message" placeholder="Tuliskan pesan...">Tuliskan pesan...</textarea>
-            <button type="submit">Kirim pesan anda</button>
-            <div class="contact__socials">
-              <div class="contact__social"></div>
-              <div class="contact__social"></div>
-              <div class="contact__social"></div>
+            <textarea class="contact__message" placeholder="Tuliskan pesan..."></textarea>
+            <div class="contact__box">
+              <button type="submit" class="contact__btn">Kirim pesan anda</button>
+              <div class="contact__socials">
+                <a href="https://www.youtube.com/@Puyu-zy5xk/featured" target="_blank"><img src="../public/images/youtube.svg" alt=""></a>
+                <a href="https://www.instagram.com/puyu_id/" target="_blank"><img src="../public/images/instagram.svg" alt=""></a>
+                <a href="https://wa.me/+6285732608099" target="_blank"><img src="../public/images/whatsapp.svg" alt=""></a>
+              </div>
             </div>
           </form>
           <div class="contact__img"></div>
@@ -102,12 +121,13 @@
 
     <footer>
       <div class="footer__logo">
-        <img src="" alt="" class="footer__logoImg" />
-        <h3 class="footer__logoTitle">PUYU.</h3>
+        <img src="../public/images/logoPuyu.png" alt="logoPuyu" class="footer__logoImg" />
+        <h3 class="footer__logoTitle">PUYU<span>.</span></h3>
         <p class="footer__paragraf">Copyright © 2020 PUYU ltd. All rights reserved</p>
       </div>
 
       <div class="footer__links">
+        <h4 class="footer__linkName">Perusahaan kami</h4>
         <ul class="footer__listLinks">
           <li class="footer__link"><a href="#hero">Beranda</a></li>
           <li class="footer__link"><a href="#benefit">Keunggulan Produk</a></li>
@@ -115,6 +135,21 @@
           <li class="footer__link"><a href="#contact">Kontak</a></li>
         </ul>
       </div>
+      <div class="footer__links">
+        <h4 class="footer__linkName">Social media</h4>
+        <ul class="footer__listLinks">
+          <li class="footer__link"><a href="https://www.youtube.com/@Puyu-zy5xk/featured" target="_blank">Youtube</a></li>
+          <li class="footer__link"><a href="https://www.instagram.com/puyu_id/" target="_blank">Instagram</a></li>
+          <li class="footer__link"><a href="https://wa.me/+6285732608099" target="_blank">Whatsapp</a></li>
+        </ul>
+      </div>
     </footer>
+
+
+    <script src="script/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

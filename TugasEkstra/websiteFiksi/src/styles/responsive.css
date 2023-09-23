@@ -1,0 +1,353 @@
+@media screen and (max-width:1440px) {
+    .header__navItem a{
+        font-size: 22px;
+    }
+    
+    .hero__imageContainer{
+        margin: 0;
+    }
+    
+    .hero__title{
+        font-size: 47.78px;
+    }
+
+    .hero__paragraf{
+        width: 40vw;
+        font-size: 20px;
+    }
+
+    .benefit__logo{
+        margin: 30px auto 25px auto;
+    }
+
+    .benefit__paragraf{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .benefit__text{
+        font-size: 20px;
+    }
+
+    .aboutUs__text{
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .contact__btn{
+        padding: 19px 10px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {    
+    .header__navList{
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        padding: 150px 0;
+        height: 100vh;
+        width: 50%;
+        justify-content: space-between;
+        text-align: center;
+        background-color: var(--tertiary);
+    }
+
+    .active{
+        right: 0;
+    }
+
+    .active span:nth-child(1){
+        transform-origin: 0;
+        transform: rotate(45deg);
+    }
+    .active span:nth-child(2){
+        opacity: 0;
+    }
+    .active span:nth-child(3){
+        transform-origin: 0 100%;
+        transform: rotate(-45deg);
+    }
+
+    .hamburger{
+        display: flex;
+        width: 50px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #hero .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__text{
+        width: 100%;
+    }
+
+    .hero__title{
+        font-size: 60px;
+    }
+
+    .hero__paragraf{
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .hero__decoration{
+        margin-bottom: 100px;
+    }
+
+    .hero__imageContainer{
+        width: 100%;
+        margin-inline: 50%;
+        transform: translateX(-45%);
+    }
+
+    .benefit__list{
+        max-width: 400px;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .benefit__decoration{
+        background-image: url(../../public/images/crab2.svg);
+        width: 53.63px;
+        height: 47.79px;
+    }
+
+    .benefit__decoration:nth-child(1){
+        top: -50px;
+        left: 0;
+    }
+    .benefit__decoration:nth-child(2){
+        top: -50px;
+    }
+
+    .benefit__decoration:nth-child(odd){
+        transform: rotate(0deg);
+    }
+
+    .benefit__decoration:nth-child(even){
+        transform: rotate(-90deg);
+    }
+
+    .aboutUs__scrollDecoration{
+        display: block;
+    }
+
+    .aboutUs__decoration{
+        position: absolute;
+        bottom: 34px;
+        background-image: url(../../public/images/ellipse1.5.png);
+    }
+
+    .aboutUs__decoration:nth-child(2){
+        background-image: url(../../public/images/ellipse2.5.png);
+        right: 0;
+        top: 127px;
+        width: 50px;
+    }
+
+    .contact__form{
+        flex-direction: column;
+        height: 864px;
+    }
+
+    .contact__img{
+        order: -1;
+        width: 100%;
+    }
+
+    .contact__form form{
+        width: 100%;
+        padding: 108px 19px 23px 19px;
+    }
+
+    .contact__box{
+        display: flex;
+        align-items: center;
+    }
+
+    .contact__btn{
+        margin-bottom: 0;
+        margin-right: 35px;
+    }
+
+    .contact__decoration{
+        width: 50px;
+        height: 622px;
+        background-image: url(../../public/images/ellipse3.5.png);
+    }
+
+    footer{
+        padding: 31px 114px;
+        width: 100%;
+    }
+
+    .footer__paragraf{
+        width: 100%;
+    }
+
+    .footer__logo{
+        width: 30%;
+    }
+
+    .footer__logoTitle{
+        font-size: 25.89px;
+    }
+
+    .footer__linkName{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container{
+        padding-inline: 15px;
+    }
+    
+    .header__logoText{
+        font-size: 25.89px;
+    }
+
+    .hamburger{
+        width: 30px;
+        height: 30px;
+        margin-right: 22px;
+    }
+
+    .hero__title{
+        font-size: 34px;
+        line-height: 34px;
+    }
+
+    .hero__paragraf{
+        font-size: 16px;
+        line-height: 26.31px;
+    }
+
+    .hero__btn{
+        border-radius: 18px;
+        padding: 21px 76px;
+        font-size: 16px;
+    }
+
+    .hero__imageContainer{
+        width: 70vw;
+        height: 417px;
+        margin-bottom: 144px;
+    }
+
+    .hero__decoration{
+        margin-bottom: 128px;
+    }
+
+    .benefit__title{
+        font-size: 25.89px;
+        width: fit-content;
+        margin: auto;
+        color: var(--tertiary);
+        position: relative;
+        margin-bottom: 86px;
+    }
+
+    .benefit__decoration{
+        display: none;
+    }
+
+    .aboutUs__title{
+        font-size: 25.89px;
+        font-weight: 700;
+    }
+
+    .aboutUs__text{
+        font-size: 16px;
+    }
+
+    .aboutUs__imgContainer{
+        width: 80%;
+        height: 380px;
+        margin: auto;
+    }
+
+    .aboutUs__img:nth-child(3){
+        margin: 0;
+    }
+
+    .aboutUs__scrollDecoration{
+        display: block;
+    }
+
+    .aboutUs__decoration{
+        background-image: url(../../public/images/ellipse1.8.png);
+        background-repeat: no-repeat;
+        bottom: -300px;
+    }
+
+    .aboutUs__decoration:nth-child(2){
+        background-image: url(../../public/images/ellipse2.8.png);
+        right: 0;
+        top: -100px;
+        width: 30px;
+    }
+
+    #aboutUs{
+        border: 0;
+    }
+
+    .contact__title{
+        font-size: 25.89px;
+    }
+
+    .contact__decoration:nth-child(1){
+        width: 30px;
+        height: 622px;
+        top: -90px;
+        background-image: url(../../public/images/ellipse3.8.png);
+    }
+
+    .contact__form{
+        width: 90%;
+    }
+
+    .contact__form form{
+        padding: 14px 16px 23px 16px;
+    }
+
+    .contact__btn{
+        margin-bottom: 33px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .contact__box{
+        display: block;
+    }
+
+    footer{
+        padding: 41px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__paragraf{
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .footer__logo{
+        width: 100%;
+    }
+
+    .footer__linkName{
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
