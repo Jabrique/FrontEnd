@@ -54,6 +54,10 @@
         text-align: center;
         background-color: var(--tertiary);
     }
+    
+    .header__navItem a{
+        color: var(--background);
+    }
 
     .active{
         right: 0;
@@ -61,7 +65,7 @@
 
     .active span:nth-child(1){
         transform-origin: 0;
-        transform: rotate(45deg);
+        transform: rotate(45deg) translate(-1px, 0);
     }
     .active span:nth-child(2){
         opacity: 0;
@@ -115,7 +119,7 @@
     }
 
     .benefit__decoration{
-        background-image: url(../../public/images/crab2.svg);
+        background-image: url(../images/crab2.svg);
         width: 53.63px;
         height: 47.79px;
     }
@@ -143,11 +147,11 @@
     .aboutUs__decoration{
         position: absolute;
         bottom: 34px;
-        background-image: url(../../public/images/ellipse1.5.png);
+        background-image: url(../images/ellipse1.5.png);
     }
 
     .aboutUs__decoration:nth-child(2){
-        background-image: url(../../public/images/ellipse2.5.png);
+        background-image: url(../images/ellipse2.5.png);
         right: 0;
         top: 127px;
         width: 50px;
@@ -181,7 +185,7 @@
     .contact__decoration{
         width: 50px;
         height: 622px;
-        background-image: url(../../public/images/ellipse3.5.png);
+        background-image: url(../images/ellipse3.5.png);
     }
 
     footer{
@@ -214,6 +218,11 @@
     
     .header__logoText{
         font-size: 25.89px;
+    }
+
+    .active span:nth-child(1){
+        transform-origin: 0;
+        transform: rotate(45deg) translate(1px, 3.5px);
     }
 
     .hamburger{
@@ -285,13 +294,13 @@
     }
 
     .aboutUs__decoration{
-        background-image: url(../../public/images/ellipse1.8.png);
+        background-image: url(../images/ellipse1.8.png);
         background-repeat: no-repeat;
         bottom: -300px;
     }
 
     .aboutUs__decoration:nth-child(2){
-        background-image: url(../../public/images/ellipse2.8.png);
+        background-image: url(../images/ellipse2.8.png);
         right: 0;
         top: -100px;
         width: 30px;
@@ -309,7 +318,7 @@
         width: 30px;
         height: 622px;
         top: -90px;
-        background-image: url(../../public/images/ellipse3.8.png);
+        background-image: url(../images/ellipse3.8.png);
     }
 
     .contact__form{

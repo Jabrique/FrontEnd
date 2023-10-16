@@ -76,10 +76,6 @@ header .container{
     gap: 39px;
 }
 
-.header__navItem a{
-    color: var(--background);
-}
-
 .hamburger{
     display: none;
 }
@@ -157,7 +153,7 @@ main{
 }
 
 .hero__image{
-    background-image: url(../../public/images/heroImage.webp);
+    background-image: url(../images/heroImage.webp);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -171,13 +167,13 @@ main{
 }
 
 .hero__decoration{
-    background-image: url(../../public/images/decoration1.png);
+    background-image: url(../images/decoration1.png);
     width: 236px;
     height: 48px;
 }
 
 .hero__scrollDecoration{
-    background-image: url(../../public/images/scrollIcon.png);
+    background-image: url(../images/scrollIcon.png);
     width: 233px;
     background-repeat: no-repeat;
     height: 99px;
@@ -242,15 +238,15 @@ main{
 }
 
 .benefit__item:nth-child(2) .benefit__logo{
-    background-image: url(../../public/images/tidakBerbahaya.svg);
+    background-image: url(../images/tidakBerbahaya.svg);
 }
 
 .benefit__item:nth-child(3) .benefit__logo{
-    background-image: url(../../public/images/environmentFriendly.svg);
+    background-image: url(../images/environmentFriendly.svg);
 }
 
 .benefit__logo{
-    background-image: url(../../public/images/chitin.svg);
+    background-image: url(../images/chitin.svg);
     width: 65px;
     height: 65px;
     margin: 54px auto 25px auto;
@@ -274,7 +270,7 @@ main{
 }
 
 .benefit__decoration{
-    background-image: url(../../public/images/crab.svg);
+    background-image: url(../images/crab.svg);
     width: 86.73px;
     height: 86.73px;
     background-repeat: no-repeat;
@@ -355,7 +351,7 @@ main{
 
 .aboutUs__img{
     border-radius: 26px;
-    background-image: url(../../public/images/produk.png);
+    background-image: url(../images/produk.png);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -365,14 +361,14 @@ main{
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
-    background-image: url(../../public/images/fotoTim.png);
+    background-image: url(../images/fotoTim.png);
     margin-bottom: 40px;
     background-position: center;
 }
 
 .aboutUs__scrollDecoration{
     display: none;
-    background-image: url(../../public/images/scrollIcon.png);
+    background-image: url(../images/scrollIcon.png);
     width: 233px;
     background-repeat: no-repeat;
     height: 99px;
@@ -383,13 +379,13 @@ main{
     position: absolute;
     height: 622px;
     width: 311px;
-    background-image: url(../../public/images/ellipse1.png);
+    background-image: url(../images/ellipse1.png);
     background-repeat: no-repeat;
     bottom: 34px;
 }
 
 .aboutUs__decoration:nth-child(2){
-    background-image: url(../../public/images/ellipse2.png);
+    background-image: url(../images/ellipse2.png);
     right: 0;
     top: 127px;
     width: 100px;
@@ -434,7 +430,7 @@ main{
 }
 
 .contact__img{
-    background-image: url(../../public/images/produk.png);
+    background-image: url(../images/produk.png);
     width: 40%;
     height: 100%;
     border-radius: 26px;
@@ -496,13 +492,13 @@ main{
     width: 120px;
     height: 622px;
     position: absolute;
-    background-image: url(../../public/images/ellipse3.png);
+    background-image: url(../images/ellipse3.png);
     background-repeat: no-repeat;
     right: 0;
 }
 
 .contact__decoration:nth-child(2){
-    background-image: url(../../public/images/ellipse4.png);
+    background-image: url(../images/ellipse4.png);
     width: 311px;
     bottom: 0;
     left: 0;
