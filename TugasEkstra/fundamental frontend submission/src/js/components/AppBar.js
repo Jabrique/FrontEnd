@@ -27,7 +27,7 @@ class AppBar extends HTMLElement {
     </style>
     <h1>MoviesApp</h1>
     <search-bar></search-bar>
-    `
+    `;
   }
 }
 

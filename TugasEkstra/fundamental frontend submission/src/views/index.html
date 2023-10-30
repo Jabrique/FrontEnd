@@ -7,13 +7,31 @@
 </head>
 <body>
     <header>
-        <app-bar></app-bar>
+        <div class="container">
+            <app-bar></app-bar>
+        </div>
     </header>
     <main>
         <section class="popular-movies">
             <div class="container">
                 <h2 class="popular-movies__title">
                     Popular Movies
+                </h2>
+                <movies-list></movies-list>
+            </div>
+        </section>
+        <section class="nowplaying-movies">
+            <div class="container">
+                <h2 class="nowplaying-movies__title">
+                    Now Playing
+                </h2>
+                <movies-list></movies-list>
+            </div>
+        </section>
+        <section class="upcoming-movies">
+            <div class="container">
+                <h2 class="upcoming-movies__title">
+                    Upcoming 
                 </h2>
                 <movies-list></movies-list>
             </div>
