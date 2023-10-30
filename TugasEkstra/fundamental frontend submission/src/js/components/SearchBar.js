@@ -42,6 +42,10 @@ class Searchbar extends HTMLElement {
             top: -2px;
             right: -20px;
         }
+
+        .header__input:focus-visible{
+          outline: none;
+        }
         .header__inputBtn img{
             width: 75%;
         }
@@ -49,7 +53,8 @@ class Searchbar extends HTMLElement {
     <form class="header__searchBar">
         <input 
         type="text"
-        class="header__input">
+        class="header__input"
+        placeholder="Search Movies ...">
         <button
         type="submit"
         class="header__inputBtn"
