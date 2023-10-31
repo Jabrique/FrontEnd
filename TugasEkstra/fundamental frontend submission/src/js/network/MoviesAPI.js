@@ -27,6 +27,14 @@ const MoviesApi = {
       },
     });
   },
+  async getMovieByTitle(title){
+    return await axios.get(ApiEndpoint.GET_MOVIE_BY_TITLE(title), {
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${Config.API_KEY}`,
+      },
+    })
+  }
 
 };
 

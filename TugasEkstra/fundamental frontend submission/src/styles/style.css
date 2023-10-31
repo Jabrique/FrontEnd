@@ -22,7 +22,7 @@ body{
 .popular-movies,
 .nowplaying-movies,
 .upcoming-movies{
-    margin-top: 100px;
+    margin: 100px 0;
 }
 
 .popular-movies__title,
@@ -30,4 +30,48 @@ body{
 .upcoming-movies__title{
     margin-bottom: 40px;
     display: inline-block;
+}
+
+.spinner{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner__item{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;;
+}
+
+.spinner__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-top: 3px solid blue;
+    border-radius: 50%;
+    animation: spinner 1s infinite;
+}
+
+@keyframes spinner {
+    0%{
+        border-top: 3px solid blue;
+        transform: rotate(0);
+    }
+    100%{
+        border-top: 3px solid blue;
+        transform: rotate(360deg);
+    }
 }

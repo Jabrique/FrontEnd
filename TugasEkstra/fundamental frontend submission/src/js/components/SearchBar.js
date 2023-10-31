@@ -61,6 +61,7 @@ class Searchbar extends HTMLElement {
         ><img src="./searchIcon.png"></button>
     </form>
     `;
+    this.shadowDom.querySelector('.header__searchBar').addEventListener('submit', this._submitEvent)
   }
 }
 
